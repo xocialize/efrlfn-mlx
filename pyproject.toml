@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "efrlfn-mlx"
+version = "0.1.0.dev0"
+description = "Apple MLX port of EfRLFN (Efficient Real-time Super-Resolution, ICLR 2026)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = ["mlx>=0.31.0", "numpy>=1.26", "safetensors>=0.4", "huggingface_hub>=0.34", "pillow>=10"]
+[project.optional-dependencies]
+parity = ["torch>=2.2"]
+dev = ["efrlfn-mlx[parity]", "pytest>=8", "gdown>=5"]
+[project.urls]
+Homepage = "https://github.com/xocialize/efrlfn-mlx"
+Reference = "https://github.com/EvgeneyBogatyrev/EfRLFN"
+[tool.setuptools.packages.find]
+include = ["efrlfn_mlx*"]
+[tool.pytest.ini_options]
+testpaths = ["tests"]

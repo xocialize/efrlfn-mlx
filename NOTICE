@@ -1,0 +1,3 @@
+efrlfn-mlx — Apple MLX port of EfRLFN. MIT License.
+Derived from EvgeneyBogatyrev/EfRLFN (MIT), "EfRLFN: Efficient Real-time Super-Resolution",
+ICLR 2026. Pretrained x2/x4 weights are the official releases, converted to MLX safetensors.
